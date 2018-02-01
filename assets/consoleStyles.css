@@ -1,0 +1,199 @@
+
+html {
+	width: 99%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	/*
+		Change this for background colors
+	*/
+	background-color: black;
+}
+
+a {
+	color: white;
+}
+
+#background {
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+}
+
+#center {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	background-color: inherit;
+}
+
+#iconPanel {
+	position: fixed;
+	bottom: 0;
+	z-index: 100;
+}
+
+#settingsIcon {
+	width: auto;
+	height: 80px;
+	padding: 20px;
+}
+
+#settingsIcon:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#mapIcon {
+	width: auto;
+	height: 80px;
+	padding: 20px;
+}
+
+#mapIcon:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#settings {
+	position: fixed;
+	width: 50%;
+	height: 100%;
+	z-index: 99;
+	background-color: rgba(255, 255, 255, 0.4);
+	text-align: center;
+	margin: auto;
+	padding-top: 2%;
+	
+	font-family: Minecraft, Arial;
+	font-size: 20px;
+	
+	display: none;
+}
+
+#settings .colorInput {
+	height: 16px;
+	text-align: 16px;
+	width: 60px;
+}
+
+#settings .backgroundColorInput {
+	height: 16px;
+	text-align: 16px;
+	width: 60px;
+}
+
+#map {
+	position: fixed;
+	display: none;
+	text-align: center;
+	z-index: 8;
+	font-family: Minecraft, Arial;
+	font-size: 20px;
+}
+
+.mapOverlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.4);
+	
+}
+
+.mapCorner {
+	
+}
+
+#mapContainer {
+	width: 100%;
+	height: 100%;
+}
+
+#mapDiagram {
+	/*border: 5px solid black;*/
+}
+
+.mapDiagramOverlay {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+}
+
+.mapDiagramCorner {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#mapDiagram tr {
+	
+}
+
+#mapDiagram tr td {
+	width: 50px;
+	height: 40px;
+	/*background-color: pink;*/
+	font-size: 30px;
+	padding-top: 10px;
+}
+
+#toggleMapOverlay {
+	-ms-transform: scale(2);
+	-moz-transform: scale(2);
+	-webkit-transform: scale(2);
+	-o-transform: scale(2);
+	padding: 10px;
+}
+
+#leDiv {
+	/*display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		" consoleWindow "
+		" consoleInput ";*/
+	height: 100%;
+	text-align: center;
+}
+
+#consoleWindowDiv {
+	grid-area: consoleWindow;
+	height: 90%;
+	background-color: inherit;
+	font-size: 16px;
+	position: relative;
+}
+
+#consoleWindow {
+	bottom: 0;
+	position: absolute;
+	text-align: left;
+	font-family: Minecraft, monospace;
+	font-size: 18px;
+	/*font-weight: bold;*/	
+	/*
+		Change this for text colors
+	*/
+	color: lightgrey;
+}
+
+#consoleInput {
+	grid-area: consoleInput;
+	height: 10%;
+	background-color: inherit;
+	
+}
+
+#commandLine {
+	margin: auto;
+	width: 100%;
+	text-align: left;
+	
+	text-align: justify;
+	font-family: Minecraft, monospace;
+	font-size: 18px;
+	/*font-weight: bold;*/
+	color: lightgrey;
+	background-color: inherit;
+	border: 0;
+}

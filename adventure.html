@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CC Adventure Classic</title>
+<meta charset="utf-8"/>
+
+<link rel = "stylesheet" type = "text/css" href = "assets/font/Minecraft font.css">
+<link rel = "stylesheet" type = "text/css" href = "assets/cssReset.css">
+<link rel = "stylesheet" type = "text/css" href = "assets/consoleStyles.css">
+
+<script src = "assets/consoleScript.js"></script>
+<script src = "assets/gameScript.js"></script>
+<script src = "assets/fileLoadSave.js"></script>
+
+<!--<script src = "assets/plugins/debug_commands.js"></script>-->
+<!--<script src = "assets/plugins/spice_of_life.js"></script>-->
+<script src = "assets/plugins/map_diagram.js"></script>
+
+<!--
+	http://www.javascriptkit.com/javatutors/loadjavascriptcss.shtml
+	http://www.javascriptkit.com/javatutors/loadjavascriptcss2.shtml
+-->
+</head>
+<body id = "body">
+<div id = "iconPanel">
+	<img src = "images/map.png" id = "mapIcon"></img><br />
+	<img src = "images/settings.png" id = "settingsIcon"></img>
+</div>
+<div id = "background">
+	<span id = "timeOnSite">0</span>
+</div>
+<div id = "settings">
+	Settings
+	<br /><br />
+	Game Saves
+	<br /><br />
+	<input type = "button" id = "saveGame" value = "Save Game"></input><br />
+	<input style = "margin: auto;" type = "file" id = "fileToLoad"><br />
+	<button id = "loadGame">Load Game</button><br /><br />
+	Text Color
+	<br /><br />
+	R <input type = "number" id = "trgbr" class = "colorInput" value = "210"></input>
+	G <input type = "number" id = "trgbg" class = "colorInput" value = "210"></input>
+	B <input type = "number" id = "trgbb" class = "colorInput" value = "210"></input>
+	<br /><br />
+	Background Color
+	<br /><br />
+	R <input type = "number" id = "brgbr" class = "backgroundColorInput" value = "0"></input>
+	G <input type = "number" id = "brgbg" class = "backgroundColorInput" value = "0"></input>
+	B <input type = "number" id = "brgbb" class = "backgroundColorInput" value = "0"></input>
+	<br />
+	<br />
+	Map Size <input type = "number" id = "mapSize" value = "2"></input><br /><br />
+	Toggle Map Overlay <input type = "checkbox" id = "toggleMapOverlay"></input><br /><br />
+	Console Lines Limit <input type = "number" id = "consoleLinesLimit" value = "1"></input>
+	
+</div>
+<div id = "map" class = "mapOverlay">
+	<div id = "mapContainer">
+		<table id = "mapDiagram" class = "mapDiagramOverlay">
+			
+		</table>
+	</div>
+</div>
+<div id = "center">
+	<div id = "leDiv">
+		<div id = "consoleWindowDiv">
+			<div id = "consoleWindow">
+				Script failed to load. Please make sure you have JavaScript installed on your device.
+			</div>
+		</div>
+		<div id = "consoleInput">
+			<input type = "text" id = "commandLine" onkeypress = "if (event.keyCode == 13) { getId('commandSubmit').click(); }">
+			<input type = "submit" id = "commandSubmit" onclick = "enterCommand();" hidden style = "position: fixed;" />
+			<!--<input type = "button" onclick = "doCommand('look')" value = "Freeze Inspect" />
+			<input type = "button" onclick = "adventureCommand('look')" value = "Simulate Inspect" />-->
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
